@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from 'next/link';
 
-export default function Home() {
+export default function PrivacyPolicy() {
   return (
     <div className="bg-neutral-950">
        <header className="absolute inset-x-0 top-0 z-50 max-w-screen-xl mx-auto">
@@ -35,26 +35,21 @@ export default function Home() {
             </div>
           </nav>
         </header>
-        <div className="relative isolate pt-14">
-          <div className="py-24 sm:py-32 lg:pb-40">
-            <div className="mx-auto max-w-7xl px-6 lg:px-8">
-              <div className="mx-auto max-w-xl text-center">
-                <h1 className="text-pretty text-4xl font-semibold tracking-tight text-neutral-100 sm:text-6xl">Incidents happen, we've got this.</h1>
-                <p className="mt-8 text-pretty text-lg text-neutral-300 sm:text-xl">Meet Drill, the incident management platform that helps teams prepare, respond, and recover with ease.</p>
-                <div className="mt-10 flex items-center justify-center gap-x-6">
-                  <Link href="https://app.drill.so/signup" className="rounded-sm bg-white px-5 py-3 text-base font-semibold text-neutral-900 hover:bg-neutral-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-400 transition ease-in-out">Get started for free</Link>
-                </div>
-              </div>
-              <Image
-                  className="mt-16 rounded-md ring-1 ring-neutral-800 sm:mt-24 vertical-perspective shadow-lg shadow-neutral-900/50"
-                    src="/product_incident.png"
-                    alt="Drill logo"
-                    width={2432}
-                    height={1217}
-                    priority
-                  />
-            </div>
-          </div>
+        <div className="px-6 py-24 mt-16 lg:px-8">
+        <div className="mx-auto max-w-3xl text-base/7 text-neutral-300">
+            <h1 className="mt-2 text-pretty text-3xl text-center font-semibold tracking-tight text-neutral-50 sm:text-4xl">Terms of Service</h1>
+            <p className="mt-6">Welcome to Drill, an incident management platform designed to help you manage and run your services. These Terms of Service ("Terms") govern your use of our platform and services.</p>
+            <h2 className="mt-6 text-pretty text-lg font-semibold tracking-tight text-neutral-50 sm:text-xl">Introduction</h2>
+            <p className="mt-6">Drill is a web-based application that provides incident management tools and services to help you manage and respond to incidents. By using our platform, you agree to be bound by these Terms.</p>
+            <h2 className="mt-6 text-pretty text-lg font-semibold tracking-tight text-neutral-50 sm:text-xl">Payment Terms</h2>
+            <p className="mt-6">Our payment terms are as follows:</p>
+            <ul className="list-disc list-inside ml-6 mt-4">
+                <li>You can pay for our services on a monthly or annual basis</li>
+                <li>All payments are non-refundable</li>
+            </ul>
+            <h2 className="mt-6 text-pretty text-lg font-semibold tracking-tight text-neutral-50 sm:text-xl">Free Trial</h2>
+            <p className="mt-6">We offer a 7-day free trial to new customers. During this trial period, you will have access to our full range of services and features.</p>
+        </div>
         </div>
         <footer className="bg-neutral-950">
         <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from 'next/link';
 
-export default function Home() {
+export default function PrivacyPolicy() {
   return (
     <div className="bg-neutral-950">
        <header className="absolute inset-x-0 top-0 z-50 max-w-screen-xl mx-auto">
@@ -35,26 +35,30 @@ export default function Home() {
             </div>
           </nav>
         </header>
-        <div className="relative isolate pt-14">
-          <div className="py-24 sm:py-32 lg:pb-40">
-            <div className="mx-auto max-w-7xl px-6 lg:px-8">
-              <div className="mx-auto max-w-xl text-center">
-                <h1 className="text-pretty text-4xl font-semibold tracking-tight text-neutral-100 sm:text-6xl">Incidents happen, we've got this.</h1>
-                <p className="mt-8 text-pretty text-lg text-neutral-300 sm:text-xl">Meet Drill, the incident management platform that helps teams prepare, respond, and recover with ease.</p>
-                <div className="mt-10 flex items-center justify-center gap-x-6">
-                  <Link href="https://app.drill.so/signup" className="rounded-sm bg-white px-5 py-3 text-base font-semibold text-neutral-900 hover:bg-neutral-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-400 transition ease-in-out">Get started for free</Link>
-                </div>
-              </div>
-              <Image
-                  className="mt-16 rounded-md ring-1 ring-neutral-800 sm:mt-24 vertical-perspective shadow-lg shadow-neutral-900/50"
-                    src="/product_incident.png"
-                    alt="Drill logo"
-                    width={2432}
-                    height={1217}
-                    priority
-                  />
-            </div>
-          </div>
+        <div className="px-6 py-24 mt-16 lg:px-8">
+        <div className="mx-auto max-w-3xl text-base/7 text-neutral-300">
+            <h1 className="mt-2 text-pretty text-3xl text-center font-semibold tracking-tight text-neutral-50 sm:text-4xl">Privacy Policy</h1>
+            <p className="mt-6">At Drill Software Limited ("Drill"), we are committed to protecting your privacy and ensuring that your personal data is handled in a responsible and secure manner. This Privacy Policy explains how we collect, use, and protect your personal data when you use our incident management platform ("Drill").</p>
+            <h2 className="mt-6 text-pretty text-lg font-semibold tracking-tight text-neutral-50 sm:text-xl">Personal Data Collection</h2>
+            <p className="mt-2">When you create an account with Drill, we collect your name and email address. This information is used to create and manage your account, and to provide you with access to our platform.</p>
+            <h2 className="mt-6 text-pretty text-lg font-semibold tracking-tight text-neutral-50 sm:text-xl">Use of Personal Data</h2>
+            <p className="mt-2">We use your personal data to:</p>
+            <ul className="list-disc list-inside ml-6">
+                <li>Create and manage your account</li>
+                <li>Provide you with access to our platform</li>
+                <li>Communicate with you about your account and any incidents you report</li>
+            </ul>
+            <h2 className="mt-6 text-pretty text-lg font-semibold tracking-tight text-neutral-50 sm:text-xl">Data Sharing</h2>
+            <p className="mt-2">We do not share your personal data with any third-party companies or organizations.</p>
+            <h2 className="mt-6 text-pretty text-lg font-semibold tracking-tight text-neutral-50 sm:text-xl">Data Protection</h2>
+            <p className="mt-2">We take reasonable measures to protect your personal data from unauthorized access, disclosure, alteration, or destruction. Your password is encrypted, but we do not encrypt any other data as standard practice.</p>
+            <h2 className="mt-6 text-pretty text-lg font-semibold tracking-tight text-neutral-50 sm:text-xl">Data Protection Officer</h2>
+            <p className="mt-2">Our Data Protection Officer is Nic Coates, who can be contacted at help@drill.so.</p>
+            <h2 className="mt-6 text-pretty text-lg font-semibold tracking-tight text-neutral-50 sm:text-xl">Compliance</h2>
+            <p className="mt-2">We comply with the General Data Protection Regulation (GDPR) and are committed to protecting your personal data in accordance with its principles.</p>
+            <h2 className="mt-6 text-pretty text-lg font-semibold tracking-tight text-neutral-50 sm:text-xl">Changes to this Policy</h2>
+            <p className="mt-2">We may update this Privacy Policy from time to time. If we make any significant changes, we will notify you by email or through a notice on our platform.</p>
+        </div>
         </div>
         <footer className="bg-neutral-950">
         <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">

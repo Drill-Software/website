@@ -19,3 +19,16 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.vertical-perspective {
+  @apply transform;
+  transform: perspective(3000px) rotateX(10deg);
+  perspective: 1000px;
+  transition-property: transform;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vertical-perspective:hover{
+  transform: perspective(1000px) rotateX(0) scale(1.1);
+}
