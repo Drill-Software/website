@@ -1,7 +1,37 @@
+'use client';
 import Image from "next/image";
 import Link from 'next/link';
+import { useState } from 'react';
 
 export default function Home() {
+
+  const [email, setEmail] = useState('');
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(null);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    try {
+      const response = await fetch('/api/waitlist', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+      if (response.ok) {
+        setFormSubmitted(true);
+        setEmail(''); // Clear the form
+        setErrorMessage(null);
+      } else {
+        const errorData = await response.json();
+        setErrorMessage(errorData.message || 'An error occurred.');
+      }
+    } catch (error) {
+      setErrorMessage('Network error or server not responding.');
+    }
+  };
+
   return (
     <div className="bg-neutral-950">
        <header className="absolute inset-x-0 top-0 z-50 max-w-screen-xl mx-auto">
@@ -27,8 +57,7 @@ export default function Home() {
               </button>
             </div>
             <div className="hidden lg:flex lg:gap-x-12">
-              <Link href="/pricing" className="text-base text-neutral-300 font-semibold hover:text-white transition ease-in-out">Pricing</Link>
-              <Link href="/changelog" className="text-base text-neutral-300 font-semibold hover:text-white transition ease-in-out">Updates</Link>
+
             </div>
             <div className="hidden lg:flex lg:flex-1 lg:justify-end">
               <Link href="https://app.drill.so/" className="text-base font-semibold text-neutral-900 bg-white py-2 px-4 rounded-sm hover:bg-neutral-200 transition ease-in-out">Sign in</Link>
@@ -42,13 +71,38 @@ export default function Home() {
                 <h1 className="text-pretty text-4xl font-semibold tracking-tight text-neutral-100 sm:text-6xl">Incidents happen, we've got this.</h1>
                 <p className="mt-8 text-pretty text-lg text-neutral-300 sm:text-xl">Meet Drill, the incident management platform that helps teams prepare, respond, and recover with ease.</p>
                 <div className="mt-10 flex items-center justify-center gap-x-6">
-                  <Link href="https://app.drill.so/signup" className="rounded-sm bg-white px-5 py-3 text-base font-semibold text-neutral-900 hover:bg-neutral-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-400 transition ease-in-out">Get started for free</Link>
+                  {formSubmitted ? (
+                  <div className="rounded-md bg-green-50 p-4 drop-shadow-sm">
+                    <div className="flex">
+                      <div className="ml-3">
+                        <h3 className="text-sm font-medium text-green-800">Thanks, watch your inbox for an invite.</h3>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <form onSubmit={handleSubmit}>
+                    <label htmlFor="email" className="sr-only">Email</label>
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="my@email.com"
+                      name="email"
+                      id="email"
+                      className="w-96 flex-auto rounded-md bg-white/5 px-3.5 py-2 mr-2 text-base text-white outline outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-white sm:text-sm/6"
+                      required
+                    />
+                    <button type="submit" className="flex-none rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Stay Updated</button>
+                    <p className="text-neutral-500 text-sm mt-4">No Spam, just updates on our launch.</p>
+                    {errorMessage && <p className="text-red-500">{errorMessage}</p>}
+                  </form>
+                )}
                 </div>
               </div>
               <Image
                   className="mt-16 rounded-md ring-1 ring-neutral-800 sm:mt-24 vertical-perspective shadow-lg shadow-neutral-900/50"
                     src="/product_incident.png"
-                    alt="Drill logo"
+                    alt="Incident page"
                     width={2432}
                     height={1217}
                     priority
@@ -59,8 +113,6 @@ export default function Home() {
         <footer className="bg-neutral-950">
         <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
           <nav className="-mb-6 flex flex-wrap justify-center gap-x-12 gap-y-3 text-sm/6" aria-label="Footer">
-            <Link href="/pricing" className="text-gray-400 hover:text-white">Pricing</Link>
-            <Link href="/changelog" className="text-gray-400 hover:text-white">Updates</Link>
             <Link href="/privacy-policy" className="text-gray-400 hover:text-white">Privacy Policy</Link>
             <Link href="/terms-of-service" className="text-gray-400 hover:text-white">Terms of Service</Link>
           </nav>
