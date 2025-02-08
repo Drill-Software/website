@@ -33,7 +33,7 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-neutral-950">
+    <div className="bg-[#040404]">
        <header className="absolute inset-x-0 top-0 z-50 max-w-screen-xl mx-auto">
           <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
             <div className="flex lg:flex-1">
@@ -42,8 +42,8 @@ export default function Home() {
                 <Image
                 src="/logo.png"
                 alt="Drill logo"
-                width={70}
-                height={21}
+                width={76}
+                height={24}
                 priority
               />
               </Link>
@@ -100,7 +100,7 @@ export default function Home() {
                 </div>
               </div>
               <Image
-                  className="mt-16 rounded-md ring-1 ring-neutral-800 sm:mt-24 vertical-perspective shadow-lg shadow-neutral-900/50"
+                  className="mt-16 rounded-md ring-4 ring-neutral-900 sm:mt-24 vertical-perspective shadow-lg shadow-neutral-950/50"
                     src="/product_incident.png"
                     alt="Incident page"
                     width={2432}
@@ -110,7 +110,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <footer className="bg-neutral-950">
+        <footer className="bg-[#040404">
         <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
           <nav className="-mb-6 flex flex-wrap justify-center gap-x-12 gap-y-3 text-sm/6" aria-label="Footer">
             <Link href="/privacy-policy" className="text-gray-400 hover:text-white">Privacy Policy</Link>
