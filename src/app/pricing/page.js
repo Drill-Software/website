@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 
 export default function Pricing() {
   return (
-    <div className="bg-[#040404] min-h-screen">
+    <>
       <Header />
       <div className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -125,6 +125,6 @@ export default function Pricing() {
         </div>
       </div>
       <Footer />
-    </div>
+    </>
   );
 } 
