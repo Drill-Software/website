@@ -7,9 +7,9 @@ export default function sitemap() {
         priority: 1,
       },
       {
-        url: 'https://www.drill.so/about',
+        url: 'https://www.drill.so/changelog',
         lastModified: new Date(),
-        changeFrequency: 'monthly',
+        changeFrequency: 'weekly',
         priority: 0.8,
       },
       {
@@ -17,6 +17,12 @@ export default function sitemap() {
         lastModified: new Date(),
         changeFrequency: 'monthly',
         priority: 0.8,
+      },
+      {
+        url: 'https://www.drill.so/about',
+        lastModified: new Date(),
+        changeFrequency: 'monthly',
+        priority: 0.6,
       },
       {
         url: 'https://www.drill.so/privacy-policy',

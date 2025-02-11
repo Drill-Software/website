@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from 'next/link';
 import { useState } from 'react';
 import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 
 export default function Home() {
 
@@ -46,21 +45,21 @@ export default function Home() {
     <div className="bg-[#040404] min-h-screen">
       <Header />
       <div className="relative isolate">
-        <div className="py-24 sm:py-32 lg:pb-40">
+        <div className="py-24 sm:py-32 lg:pb-40 mt-8">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
               <div className="mb-8">
                 <span className="inline-flex items-center rounded-md bg-indigo-400/10 px-3 py-1 text-sm font-medium text-indigo-400 ring-1 ring-inset ring-indigo-400/30">
-                  Coming Soon
+                  Early Access
                 </span>
               </div>
               <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-                Incidents happen.
+                Turn incidents into
                 <br />
-                Learn from every one.
+                your competitive edge
               </h1>
               <p className="mt-6 text-base leading-8 text-gray-300">
-                Build stronger teams and more resilient systems with a modern incident management platform that transforms how you handle, learn, and prevent incidents.
+                Stop dreading incidents and start using them to build stronger teams. We're building tools that transform how teams learn and grow from every incident.
               </p>
               <div className="mt-10 flex flex-col items-center gap-y-6">
                 {formSubmitted ? (
@@ -266,7 +265,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

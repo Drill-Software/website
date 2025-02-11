@@ -1,13 +1,12 @@
 'use client';
 import Link from 'next/link';
 import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 
 export default function Pricing() {
   return (
     <>
       <Header />
-      <div className="py-24 sm:py-32">
+      <div className="py-24 sm:py-32 mt-8">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center">
             <h2 className="text-base font-semibold leading-7 text-indigo-400">Pricing</h2>
@@ -124,7 +123,6 @@ export default function Pricing() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 } 

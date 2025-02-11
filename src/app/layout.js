@@ -1,6 +1,8 @@
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Script from 'next/script';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -43,7 +45,9 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className={`${inter.className} h-full bg-[#040404] text-white antialiased`}>
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

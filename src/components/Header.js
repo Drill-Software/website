@@ -7,13 +7,14 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navigationItems = [
-    { name: 'About', href: '/about' },
     { name: 'Pricing', href: '/pricing' },
+    { name: 'About', href: '/about' },
+    { name: 'Changelog', href: '/changelog' },
   ];
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm bg-[#040404]/80 transition-colors">
+      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xs bg-[#040404]/80 transition-colors">
         <nav className="container mx-auto flex items-center justify-between p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
             <Link href="/" className="-m-1.5 p-1.5">
