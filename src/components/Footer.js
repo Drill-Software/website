@@ -4,7 +4,6 @@ export default function Footer() {
   const navigationItems = [
     { name: 'About', href: '/about' },
     { name: 'Pricing', href: '/pricing' },
-    { name: 'Docs', href: '/docs' },
   ];
 
   return (
@@ -67,7 +66,7 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <p className="mt-8 text-center text-sm text-gray-400">&copy; {new Date().getFullYear()} Drill Software Limited. All rights reserved.</p>
+        <p className="mt-8 text-left text-xs text-gray-400">&copy; {new Date().getFullYear()} Drill Software Limited. All rights reserved.</p>
       </div>
     </footer>
   );

@@ -55,10 +55,12 @@ export default function Home() {
                 </span>
               </div>
               <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-                Incident response that works for your team
+                Incidents happen.
+                <br />
+                Learn from every one.
               </h1>
-              <p className="mt-6 text-lg leading-8 text-gray-300">
-                Streamline your incident management process with automated workflows, real-time collaboration, and actionable insights.
+              <p className="mt-6 text-base leading-8 text-gray-300">
+                Build stronger teams and more resilient systems with a modern incident management platform that transforms how you handle, learn, and prevent incidents.
               </p>
               <div className="mt-10 flex flex-col items-center gap-y-6">
                 {formSubmitted ? (
@@ -80,7 +82,7 @@ export default function Home() {
                         required
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        className="min-w-0 flex-auto rounded-md bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
+                        className="min-w-0 flex-auto rounded-md bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6 outline-none"
                         placeholder="Enter your email"
                       />
                       <button
