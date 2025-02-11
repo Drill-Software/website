@@ -126,8 +126,9 @@ export default function Home() {
               {/* Rapid Response Section */}
               <div className="mt-16 sm:mt-20 lg:mt-24">
                 <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-                  <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:gap-x-16">
-                    <div className="relative lg:order-last">
+                  <div className="grid grid-cols-1 gap-y-8 lg:grid-cols-2 lg:gap-x-16">
+                    {/* Image always shows first on mobile */}
+                    <div className="relative order-first lg:order-last">
                       <Image
                         src="/rapid-response.png"
                         alt="Rapid response interface"
@@ -177,8 +178,9 @@ export default function Home() {
               {/* Seamless Collaboration Section */}
               <div className="mt-16 sm:mt-20 lg:mt-24">
                 <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-                  <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:gap-x-16">
-                    <div className="relative">
+                  <div className="grid grid-cols-1 gap-y-8 lg:grid-cols-2 lg:gap-x-16">
+                    {/* Image always shows first on mobile */}
+                    <div className="relative order-first">
                       <Image
                         src="/collaboration.png"
                         alt="Team collaboration interface"
@@ -228,7 +230,19 @@ export default function Home() {
               {/* Integrations Section */}
               <div className="mt-16 sm:mt-20 lg:mt-24">
                 <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-                  <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:gap-x-16">
+                  <div className="grid grid-cols-1 gap-y-8 lg:grid-cols-2 lg:gap-x-16">
+                    {/* Image always shows first on mobile */}
+                    <div className="relative order-first lg:order-last">
+                      <Image
+                        src="/integrations.png"
+                        alt="Integration ecosystem"
+                        width={1200}
+                        height={800}
+                        className="relative rounded-xl shadow-xl ring-1 ring-gray-900/10"
+                        priority
+                      />
+                      <div className="absolute inset-0 rounded-xl bg-gradient-to-tr from-[#040404] via-transparent to-transparent opacity-20"></div>
+                    </div>
                     <div className="pt-6">
                       <div className="flex items-center gap-x-3">
                         <div className="rounded-lg bg-indigo-500/10 p-2 ring-1 ring-indigo-500/20">
@@ -244,17 +258,6 @@ export default function Home() {
                       <p className="mt-6 text-base leading-7 text-gray-300">
                         From communication tools like Slack and Microsoft Teams, to monitoring services like Datadog and PagerDuty, to development platforms like GitHub and Jira - Drill works with the tools your team already loves.
                       </p>
-                    </div>
-                    <div className="relative lg:order-last">
-                      <Image
-                        src="/integrations.png"
-                        alt="Integration ecosystem"
-                        width={1200}
-                        height={800}
-                        className="relative rounded-xl shadow-xl ring-1 ring-gray-900/10"
-                        priority
-                      />
-                      <div className="absolute inset-0 rounded-xl bg-gradient-to-tr from-[#040404] via-transparent to-transparent opacity-20"></div>
                     </div>
                   </div>
                 </div>
